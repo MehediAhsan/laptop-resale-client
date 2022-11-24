@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Category = ({category}) => {
-    const {name, img} = category;
+    const {_id, name, img} = category;
     return (
-        <Link to="/" aria-label="View Item">
+        <Link to={`/category/${_id}`} aria-label="View Item">
         <div className="relative overflow-hidden transition duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img
             className="object-cover w-full h-56 md:h-60 xl:h-64"
