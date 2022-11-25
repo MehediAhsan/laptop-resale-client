@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const AddProduct = () => {
     const navigate = useNavigate();
-    const user = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
 
     const { data: categories = [] } = useQuery({
         queryKey: ["categories"],
