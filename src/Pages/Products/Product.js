@@ -19,7 +19,7 @@ const Product = ({product}) => {
                 >Book Now</label>
                 { 
                     bookingProduct &&
-                    <ProductBookModal bookingProduct={bookingProduct}></ProductBookModal>
+                    <ProductBookModal bookingProduct={bookingProduct} setBookingProduct={setBookingProduct}></ProductBookModal>
                 }   
             </div>
         </div>
