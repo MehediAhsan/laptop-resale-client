@@ -24,13 +24,30 @@ const SignUp = () => {
             }
             updateUser(userInfo)
             .then(() => {
-                
+                saveUser(data.name, data.email, data.role)
             })
             .catch(error => console.log(error))
         })
         .catch(error => {
             console.log(error)
             setSignUpError(error.message)
+        })
+    }
+
+
+    const saveUser = (name, email, role) => {
+        const user = {name, email, role};
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);       
         })
     }
 
@@ -71,6 +88,15 @@ const SignUp = () => {
                             <span className="label-text">Forgot Password ?</span>
                         </label>
                         {errors.password && <p role="alert" className='text-red-500'>{errors.password?.message}</p>}
+                    </div>
+                    <div className="form-control w-full mb-5">
+                        <label className="label">
+                            <span className="label-text">Account Type</span>
+                        </label>
+                        <select {...register("role")} className="select select-bordered w-full max-w-xs">
+                            <option value='buyer'>buyer</option>
+                            <option value='seller'>seller</option>
+                        </select>
                     </div> 
                     <input className='btn btn-secondary w-full' type="submit" value="SignUp" />
                     <div>
