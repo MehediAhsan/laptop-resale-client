@@ -27,6 +27,23 @@ const MyProducts = () => {
                 toast.success('Product deleted successfully')
             }
         })
+      }
+
+    const handleAdvertise = product => {
+      fetch(`http://localhost:5000/products/${product._id}`, {
+          method: 'PATCH', 
+          headers: {
+              'content-type': 'application/json',
+          },
+          body: JSON.stringify({isAdvertised: true})
+      })
+      .then(res => res.json())
+      .then(data => {
+          if(data.modifiedCount > 0) {
+            refetch();
+            toast.success('Product Advertised successfully')
+          }
+      })
     }
 
 
@@ -42,7 +59,7 @@ const MyProducts = () => {
               <th>Seller Name</th>
               <th>Price</th>
               <th>Delete</th>
-              <th></th>
+              <th>Adervise Product</th>
             </tr>
           </thead>
           <tbody>
@@ -58,7 +75,7 @@ const MyProducts = () => {
                         <button onClick={() => handleDeleteProduct(product)} className="btn btn-xs btn-error">Delete</button>
                     </td>
                     <td>
-                        <button className="btn btn-xs btn-secondary">Advertise</button>
+                        <button onClick={() => handleAdvertise(product)} className="btn btn-xs btn-secondary">{product.isAdvertised ? 'Done': 'Advertise'}</button>
                     </td>
                   </tr>)
             }

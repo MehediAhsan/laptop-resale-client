@@ -27,6 +27,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const resale_price = form.resale_price.value;
         const original_price = form.original_price.value;
+        const condition = form.condition.value;
         const phone = form.phone.value;
         const location = form.location.value;
         const use_years = form.years.value;
@@ -39,11 +40,13 @@ const AddProduct = () => {
             description,
             resale_price,
             original_price,
+            condition,
             seller_name,
             seller_email,
             phone,
             location,
-            use_years
+            use_years,
+            isAdvertised:false
         }
 
         console.log(product);
@@ -102,6 +105,14 @@ const AddProduct = () => {
                 <div>
                     <label for="original_price" className="block mb-1 ml-1">Original Price</label>
                     <input id="original_price" type="number" name='original_price' placeholder="Price" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                </div>
+                <div>
+                    <label for="condition" className="block mb-1 ml-1">Product Condition</label>
+                    <select name='condition' className="select select-bordered w-full max-w-xs">
+                        <option value='excellent'>excellent</option>
+                        <option value='good'>good</option>
+                        <option value='fair'>fair</option>
+                    </select>
                 </div>
                 <div>
                     <label for="phone" className="block mb-1 ml-1">Phone Number</label>

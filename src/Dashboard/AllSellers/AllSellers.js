@@ -26,6 +26,23 @@ const AllSellers = () => {
         })
     }
 
+    const handleUpdateStatus = seller => {
+      fetch(`http://localhost:5000/users/${seller._id}`, {
+          method: 'PATCH', 
+          headers: {
+              'content-type': 'application/json',
+          },
+          body: JSON.stringify({verified: true})
+      })
+      .then(res => res.json())
+      .then(data => {
+          if(data.modifiedCount > 0) {
+            refetch();
+            toast.success('Seller verified successfully')
+          }
+      })
+    }
+
     return (
         <div className="px-10">
       <h1 className="text-3xl font-semibold my-10">All Sellers</h1>
@@ -36,7 +53,7 @@ const AllSellers = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Delete</th>
-              <th></th>
+              <th>Seller's Status</th>
             </tr>
           </thead>
           <tbody>
@@ -48,7 +65,7 @@ const AllSellers = () => {
                         <button onClick={() => handleDeleteSeller(seller)} className="btn btn-xs btn-error">Delete</button>
                     </td>
                     <td>
-                        <button className="btn btn-xs btn-secondary">verify</button>
+                        <button onClick={() => handleUpdateStatus(seller)} className="btn btn-xs btn-secondary">{seller.verified ? 'verified' : 'verify'}</button>
                     </td>
                   </tr>)
             }
