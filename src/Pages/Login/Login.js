@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
@@ -6,8 +7,10 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const {signIn} = useContext(AuthContext);
+    const {signIn, providerLogin, setLoading} = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+
+    const googleProvider = new GoogleAuthProvider();
 
     const handleLogin = data => {
         console.log(data);
@@ -22,6 +25,39 @@ const Login = () => {
         .catch(error => {
             console.log(error);
             setLoginError(error.message);
+        })
+    }
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+        .then( result => {
+            const user = result.user;
+            console.log(user);
+            toast.success('User Created Successfully');
+            const role = 'buyer';
+            saveUser(user.displayName, user.email,role)                       
+        })
+        .catch( error => {
+            console.error(error);
+        })
+        .finally( () => {
+            setLoading(false);
+        })
+    }
+
+    const saveUser = (name, email, role) => {
+        const user = {name, email, role};
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);       
         })
     }
 
@@ -58,7 +94,7 @@ const Login = () => {
                 </form>
                 <p>New to Laptop Resale? <Link to="/signup" className='text-secondary'>Create new account</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-secondary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-secondary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
     );
 };
