@@ -8,7 +8,11 @@ const AdvertisedItems = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/advertise')
+        axios.get('http://localhost:5000/advertise', {
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
         .then(data => {
             setProducts(data.data);
             setLoading(false);

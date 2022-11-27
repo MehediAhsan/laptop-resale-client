@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import ProductBookModal from './ProductBookModal';
 
 const Product = ({product}) => {
@@ -13,6 +14,22 @@ const Product = ({product}) => {
                 setSeller(data);
             })
     }, [seller_email])
+
+    const handleReportProduct = product => {
+        fetch(`http://localhost:5000/reports/${product._id}`, {
+            method: 'PATCH', 
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify({reported: true})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0) {
+              toast.success('Report admin successfully')
+            }
+        })
+    }
 
     return (
         <>
@@ -32,6 +49,9 @@ const Product = ({product}) => {
                 {
                     seller.verified && <img className='w-5 h-5' src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="" />
                 }
+            </div>
+            <div>
+                <button onClick={() => handleReportProduct(product)} className='p-2 bg-orange-500 text-white rounded mt-5'>Report to Admin</button>
             </div>
             <div className="card-actions flex justify-end">
                 <label
