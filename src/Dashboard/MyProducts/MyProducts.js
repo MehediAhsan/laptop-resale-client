@@ -68,14 +68,18 @@ const MyProducts = () => {
                     <td>
                        <img className='w-24' src={product.picture} alt="" /> 
                     </td>
-                    <td>Available</td>
+                    <td className='text-primary font-semibold text-xl'>
+                      {
+                        product.paid ? 'Sold' : 'available'
+                      }
+                    </td>
                     <td>{product.seller_name}</td>
                     <td>${product.resale_price}</td>
                     <td>
                         <button onClick={() => handleDeleteProduct(product)} className="btn btn-xs btn-error">Delete</button>
                     </td>
                     <td>
-                        <button onClick={() => handleAdvertise(product)} className="btn btn-xs btn-secondary">{product.isAdvertised ? 'Done': 'Advertise'}</button>
+                        <button onClick={() => handleAdvertise(product)} className="btn btn-xs btn-secondary" disabled={product.paid ? true : false}>{product.isAdvertised ? 'Already Advertise': 'Advertise'}</button>
                     </td>
                   </tr>)
             }

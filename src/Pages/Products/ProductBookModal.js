@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const ProductBookModal = ({bookingProduct, setBookingProduct}) => {
     const {user} = useContext(AuthContext);
-    const {picture, product_name, resale_price} = bookingProduct;
+    const {_id, picture, product_name, resale_price} = bookingProduct;
 
     const handleBooking = event => {
         event.preventDefault();
@@ -16,6 +16,7 @@ const ProductBookModal = ({bookingProduct, setBookingProduct}) => {
         
         const booking = {
             product: product_name,
+            product_id: _id,
             picture,
             buyers: userName,
             email,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProductBookModal from './ProductBookModal';
 
 const Product = ({product}) => {
-    const {picture, product_name, resale_price, seller_email, seller_name, original_price, location, use_years, description, condition} = product;
+    const {picture, product_name, resale_price, seller_email, seller_name, original_price, location, use_years, description, condition, paid} = product;
     const [bookingProduct, setBookingProduct] = useState(null);
     const [seller, setSeller] = useState({});
 
@@ -15,6 +15,8 @@ const Product = ({product}) => {
     }, [seller_email])
 
     return (
+        <>
+        { !paid && 
         <div className="card lg:card-side bg-base-100 shadow-xl mx-20">
         <figure><img className='md:w-96 md:h-96' src={picture} alt="Album"/></figure>
         <div className="card-body">
@@ -44,6 +46,8 @@ const Product = ({product}) => {
             </div>
         </div>
         </div>
+        }
+        </>
     );
 };
 
