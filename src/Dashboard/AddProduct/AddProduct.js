@@ -23,7 +23,6 @@ const AddProduct = () => {
         const seller_name = user?.displayName;
         const seller_email = user?.email;
         const name = form.name.value;
-        // const img = form.img.value;
         const description = form.description.value;
         const resale_price = form.resale_price.value;
         const original_price = form.original_price.value;
@@ -105,7 +104,7 @@ const AddProduct = () => {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="image" className="block mb-1 ml-1">ImageURL</label>
+                    <label htmlFor="image" className="block mb-1 ml-1">Image</label>
                     <input
                         type="file"
                         id='image'
