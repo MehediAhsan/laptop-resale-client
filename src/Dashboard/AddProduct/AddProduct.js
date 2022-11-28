@@ -23,7 +23,7 @@ const AddProduct = () => {
         const seller_name = user?.displayName;
         const seller_email = user?.email;
         const name = form.name.value;
-        const img = form.img.value;
+        // const img = form.img.value;
         const description = form.description.value;
         const resale_price = form.resale_price.value;
         const original_price = form.original_price.value;
@@ -33,40 +33,54 @@ const AddProduct = () => {
         const use_years = form.years.value;
         const category_id = form.category.value;
 
-        const product = {
-            product_name:name,
-            category_id,
-            picture:img,
-            description,
-            resale_price,
-            original_price,
-            condition,
-            seller_name,
-            seller_email,
-            phone,
-            location,
-            use_years,
-            isAdvertised:false
-        }
+        const image = form.image.files[0];
+        const formData = new FormData();
+        formData.append('image',image);
+        const url = `https://api.imgbb.com/1/upload?key=${process.env.REACT_APP_imgbb_key}`;
 
-        console.log(product);
-
-        fetch('http://localhost:5000/products', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(product)
+        fetch(url, {
+            method:'POST',
+            body: formData
         })
-        .then( res => res.json())
-        .then( data => {
-            if(data.acknowledged){
-                toast.success('Product added Successfully')
-                form.reset();
-                navigate('/');
+        .then(res => res.json())
+        .then(imgData => {
+            if(imgData.success){
+                const product = {
+                    product_name:name,
+                    category_id,
+                    picture: imgData.data.url,
+                    description,
+                    resale_price,
+                    original_price,
+                    condition,
+                    seller_name,
+                    seller_email,
+                    phone,
+                    location,
+                    use_years,
+                    isAdvertised:false
+                }
+        
+                console.log(product);
+        
+                fetch('http://localhost:5000/products', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                    },
+                    body: JSON.stringify(product)
+                })
+                .then( res => res.json())
+                .then( data => {
+                    if(data.acknowledged){
+                        toast.success('Product added Successfully')
+                        form.reset();
+                        navigate('/dashboard/myproducts');
+                    }
+                })
+                .catch( error => console.error(error))
             }
-        })
-        .catch( error => console.error(error))
+        })    
     }
 
     return (
@@ -91,8 +105,13 @@ const AddProduct = () => {
                     </select>
                 </div>
                 <div>
-                    <label for="img" className="block mb-1 ml-1">ImageURL</label>
-                    <input id="img" type="text" name='img' placeholder="ImageURL" className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" required />
+                    <label htmlFor="image" className="block mb-1 ml-1">ImageURL</label>
+                    <input
+                        type="file"
+                        id='image'
+                        name='image'
+                        className="input input-bordered w-full max-w-xs"
+                    />
                 </div>
                 <div>
                     <label for="description" className="block mb-1 ml-1">Description</label>
