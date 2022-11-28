@@ -9,7 +9,7 @@ const Product = ({product}) => {
     const [seller, setSeller] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${seller_email}`)
+        fetch(`https://laptop-resale-server.vercel.app/users/${seller_email}`)
             .then(res => res.json())
             .then(data => {
                 setSeller(data);
@@ -17,7 +17,7 @@ const Product = ({product}) => {
     }, [seller_email])
 
     const handleReportProduct = product => {
-        fetch(`http://localhost:5000/reports/${product._id}`, {
+        fetch(`https://laptop-resale-server.vercel.app/reports/${product._id}`, {
             method: 'PATCH', 
             headers: {
                 'content-type': 'application/json',

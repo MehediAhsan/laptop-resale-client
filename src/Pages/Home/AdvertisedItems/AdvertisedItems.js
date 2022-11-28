@@ -8,7 +8,7 @@ const AdvertisedItems = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/advertise')
+        axios.get('https://laptop-resale-server.vercel.app/advertise')
         .then(data => {
             setProducts(data.data);
             setLoading(false);

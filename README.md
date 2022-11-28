@@ -4,7 +4,7 @@ LaptopResaleZ. website helps people to buy any second-hand product that is sell 
 
 
 ## Live Link
-Hosted in Firebase -> [LaptopResaleZ.]()
+Hosted in Firebase -> [LaptopResaleZ.](https://laptop-resale-8831b.web.app/)
 
 ## Project Features and Functionality:
 
