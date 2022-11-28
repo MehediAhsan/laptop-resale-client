@@ -18,7 +18,11 @@ module.exports = {
     ]
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Berkshire': ['Berkshire Swash', 'cursive'],
+      }
+    },
   },
   plugins: [require("daisyui")],
 }

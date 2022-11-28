@@ -34,10 +34,11 @@ const MyProducts = () => {
       }
 
     const handleAdvertise = product => {
-      fetch(`http://localhost:5000/products/${product._id}`, {
+      fetch(`http://localhost:5000/advertise/${product._id}`, {
           method: 'PATCH', 
           headers: {
               'content-type': 'application/json',
+              authorization: `bearer ${localStorage.getItem('accessToken')}`
           },
           body: JSON.stringify({isAdvertised: true})
       })

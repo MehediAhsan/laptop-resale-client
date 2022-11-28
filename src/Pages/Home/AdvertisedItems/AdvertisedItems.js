@@ -8,11 +8,7 @@ const AdvertisedItems = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/advertise', {
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
+        axios.get('http://localhost:5000/advertise')
         .then(data => {
             setProducts(data.data);
             setLoading(false);
@@ -24,7 +20,7 @@ const AdvertisedItems = () => {
             {
                 loading ? <Loader></Loader> :
                 <>
-                <h1 className='text-3xl font-bold text-center text-primary mb-20'>Advertised Items</h1>
+                <h1 className='text-4xl font-semibold text-center text-primary mb-20'>Advertised Items</h1>
                 <div className='grid grid-cols-1 gap-6'>
                     {
                         products.map(product => <Product key={product._id} product={product}></Product>)

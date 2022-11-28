@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../contexts/AuthProvider';
 
-const ProductBookModal = ({bookingProduct, setBookingProduct}) => {
+const ProductBookModal = ({bookingProduct, setBookingProduct, seller_email}) => {
     const {user} = useContext(AuthContext);
     const {_id, picture, product_name, resale_price} = bookingProduct;
 
@@ -13,6 +13,16 @@ const ProductBookModal = ({bookingProduct, setBookingProduct}) => {
         const email = form.email.value;
         const phone = form.phone.value;
         const meeting_location = form.meeting_location.value;
+
+        if(!user){
+            toast.error('Booking this product, Please Login');
+            return;
+        }
+
+        if(email === seller_email){
+            toast.error('Sorry! You are a seller, you can not book product');
+            return;
+        }
         
         const booking = {
             product: product_name,
