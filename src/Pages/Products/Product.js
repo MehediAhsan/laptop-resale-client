@@ -38,7 +38,7 @@ const Product = ({product}) => {
     return (
         <>
         { !paid && 
-        <div className="card lg:card-side bg-base-100 shadow-xl md:mx-36">
+        <div className="card lg:card-side bg-base-100 shadow-xl mx-4 md:mx-36">
         <figure><img className='md:w-96 md:h-96 p-2 rounded' src={picture} alt="Album"/></figure>
         <div className="card-body">
             <h2 className="card-title">{product_name}</h2>
@@ -49,14 +49,14 @@ const Product = ({product}) => {
             <p>Location: {location}</p>
             <p>Years of Use: {use_years}years</p>
             <div className='flex flex-row items-center gap-1 font-medium'>
-                <>{seller_name}</>
+                <>Seller: {seller_name}</>
                 {
                     seller.verified && <img className='w-5 h-5' src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="" />
                 }
             </div>
             <p>Posted Time: {time.slice(0,10)}</p>
             <div>
-                <button onClick={() => handleReportProduct(product)} className=' text-yellow-500 rounded flex justify-center items-center gap-1 font-semibold text-xl'>Report to Admin <FaArrowRight></FaArrowRight></button>
+                <button onClick={() => handleReportProduct(product)} className=' text-orange-500 rounded flex justify-center items-center gap-1 font-semibold text-lg'>Report to Admin <FaArrowRight></FaArrowRight></button>
             </div>
             <div className="card-actions flex justify-end">
                 <label

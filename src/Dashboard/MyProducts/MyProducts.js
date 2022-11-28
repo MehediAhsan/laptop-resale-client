@@ -73,7 +73,7 @@ const MyProducts = () => {
                     <td>
                        <img className='w-24' src={product.picture} alt="" /> 
                     </td>
-                    <td className='text-primary font-semibold text-xl'>
+                    <td className='text-primary font-semibold text-lg'>
                       {
                         product.paid ? 'Sold' : 'available'
                       }

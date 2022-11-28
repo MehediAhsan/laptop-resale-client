@@ -115,15 +115,15 @@ const AddProduct = () => {
                 </div>
                 <div>
                     <label for="description" className="block mb-1 ml-1">Description</label>
-                    <textarea id="description" type="text" name='description' placeholder="Description..." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" required></textarea>
+                    <textarea id="description" type="text" name='description' placeholder="Description..." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" required></textarea>
                 </div>
                 <div>
                     <label for="resale_price" className="block mb-1 ml-1">Resale Price</label>
-                    <input id="resale_price" type="number" name='resale_price' placeholder="Resale Price" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                    <input id="resale_price" type="number" name='resale_price' placeholder="Resale Price" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" />
                 </div>
                 <div>
                     <label for="original_price" className="block mb-1 ml-1">Original Price</label>
-                    <input id="original_price" type="number" name='original_price' placeholder="Price" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                    <input id="original_price" type="number" name='original_price' placeholder="Price" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" />
                 </div>
                 <div>
                     <label for="condition" className="block mb-1 ml-1">Product Condition</label>
@@ -135,15 +135,15 @@ const AddProduct = () => {
                 </div>
                 <div>
                     <label for="phone" className="block mb-1 ml-1">Phone Number</label>
-                    <input id="phone" type="text" name='phone' placeholder="Phone number" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                    <input id="phone" type="text" name='phone' placeholder="Phone number" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" />
                 </div>
                 <div>
                     <label for="location" className="block mb-1 ml-1">Location</label>
-                    <input id="location" type="text" name='location' placeholder="Location" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                    <input id="location" type="text" name='location' placeholder="Location" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" />
                 </div>
                 <div>
                     <label for="years" className="block mb-1 ml-1">Years of use</label>
-                    <input id="years" type="text" name='years' placeholder="Years of use" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700" />
+                    <input id="years" type="text" name='years' placeholder="Years of use" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-100 text-gray-700 border border-gray-300" />
                 </div>
                 
                 <div>

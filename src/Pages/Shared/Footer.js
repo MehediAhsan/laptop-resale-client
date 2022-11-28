@@ -20,16 +20,13 @@ const Footer = () => {
                         <h3 className="tracking-wide uppercase dark:text-gray-700">Services</h3>
                         <ul className="space-y-1">
                             <li>
-                                <Link rel="noopener noreferrer" to="/">Wedding</Link>
+                                <Link rel="noopener noreferrer" to="/">Hp</Link>
                             </li>
                             <li>
-                                <Link rel="noopener noreferrer" to="/">Sports</Link>
+                                <Link rel="noopener noreferrer" to="/">Asus</Link>
                             </li>
                             <li>
-                                <Link rel="noopener noreferrer" to="/">Event</Link>
-                            </li>
-                            <li>
-                                <Link rel="noopener noreferrer" to="/">Nature</Link>
+                                <Link rel="noopener noreferrer" to="/">Dell</Link>
                             </li>
                         </ul>
                     </div>
@@ -74,7 +71,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-gray-500">© 2022 Company Co. All rights reserved.</div>
+            <div className="py-6 text-sm text-center dark:text-gray-500">© 2022 LaptopResaleZ. All rights reserved.</div>
         </footer>
     );
 };

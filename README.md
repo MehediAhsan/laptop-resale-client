@@ -6,6 +6,10 @@ LaptopResaleZ. website helps people to buy any second-hand product that is sell 
 ## Live Link
 Hosted in Firebase -> [LaptopResaleZ.](https://laptop-resale-8831b.web.app/)
 
+adminEmail: mehediahsan@gmail.com
+
+adminPassword: mehedi1@
+
 ## Project Features and Functionality:
 
 - Add a navbar section where we can see different route(home, blog, Dashboard, login) 
@@ -33,8 +37,4 @@ Toast -> [ReactHotToast](https://react-hot-toast.com/)
 
 Tooltip -> [Tooltip](https://www.npmjs.com/package/react-tippy)
 
-## Admin Email and Password
 
-adminEmail: mehediahsan@gmail.com
-
-adminPassword: mehedi1@
