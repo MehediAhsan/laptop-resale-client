@@ -38,16 +38,16 @@ const Product = ({product}) => {
     return (
         <>
         { !paid && 
-        <div className="card lg:card-side bg-base-100 shadow-xl mx-4 md:mx-36">
+        <div className="card lg:card-side bg-base-100 shadow-lg mx-4 md:mx-36 border border-red-300">
         <figure><img className='md:w-96 md:h-96 p-2 rounded' src={picture} alt="Album"/></figure>
         <div className="card-body">
             <h2 className="card-title">{product_name}</h2>
             <p>{description}</p>
             <p className='font-medium'>Resale Price: ${resale_price}</p>
             <p className='font-medium'>Original Price: ${original_price}</p>
-            <p>{condition}</p>
-            <p>Location: {location}</p>
-            <p>Years of Use: {use_years}years</p>
+            <p className='font-medium'>Product Condition: {condition}</p>
+            <p className='font-medium'>Location: {location}</p>
+            <p className='font-medium'>Years of Use: {use_years}years</p>
             <div className='flex flex-row items-center gap-1 font-medium'>
                 <>Seller: {seller_name}</>
                 {
@@ -55,20 +55,21 @@ const Product = ({product}) => {
                 }
             </div>
             <p>Posted Time: {time.slice(0,10)}</p>
-            <div>
-                <button onClick={() => handleReportProduct(product)} className=' text-orange-500 rounded flex justify-center items-center gap-1 font-semibold text-lg'>Report to Admin <FaArrowRight></FaArrowRight></button>
-            </div>
-            <div className="card-actions flex justify-end">
+            <div className='flex justify-between mt-2'>
+                <button onClick={() => handleReportProduct(product)} className=' text-white rounded flex justify-center items-center uppercase text-base bg-red-500 py-1 px-2'>Report</button>
+                <div className="card-actions">
                 <label
                     htmlFor="product-booking-modal"
-                    className="btn btn-primary text-white"
+                    className="rounded uppercase text-base bg-primary text-white py-2 cursor-pointer px-3"
                     onClick={() => setBookingProduct(product)}
                 >Book Now</label>
                 { 
                     bookingProduct &&
                     <ProductBookModal bookingProduct={bookingProduct} setBookingProduct={setBookingProduct} seller_email={seller_email}></ProductBookModal>
                 }   
+                </div>
             </div>
+            
         </div>
         </div>
         }
