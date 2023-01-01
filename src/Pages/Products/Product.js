@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import ProductBookModal from './ProductBookModal';
-import { FaArrowRight } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
 
 const Product = ({product}) => {
     const {picture, product_name, resale_price, seller_email, seller_name, original_price, location, use_years, description, condition, paid, time} = product;
@@ -38,23 +38,40 @@ const Product = ({product}) => {
     return (
         <>
         { !paid && 
-        <div className="card lg:card-side bg-base-100 shadow-lg mx-4 md:mx-36 border border-red-300">
-        <figure><img className='md:w-96 md:h-96 p-2 rounded' src={picture} alt="Album"/></figure>
+        <div className="card bg-base-100 shadow-lg mx-4 md:mx-0 border border-red-300">
+        <figure><img className='md:w-full md:h-80 rounded' src={picture} alt="Album"/></figure>
         <div className="card-body">
+            <div className='flex justify-between'>
             <h2 className="card-title">{product_name}</h2>
-            <p>{description}</p>
-            <p className='font-medium'>Resale Price: ${resale_price}</p>
-            <p className='font-medium'>Original Price: ${original_price}</p>
-            <p className='font-medium'>Product Condition: {condition}</p>
-            <p className='font-medium'>Location: {location}</p>
-            <p className='font-medium'>Years of Use: {use_years}years</p>
-            <div className='flex flex-row items-center gap-1 font-medium'>
-                <>Seller: {seller_name}</>
+            <div className='flex flex-row items-center gap-1 font-medium text-lg'>
+                <>{seller_name}</>
                 {
                     seller.verified && <img className='w-5 h-5' src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="" />
                 }
             </div>
-            <p>Posted Time: {time.slice(0,10)}</p>
+            </div>
+            <p>{description}</p>
+            <div className='flex justify-between'>
+            
+            <span className='font-medium capitalize'>Product Condition: {condition}</span>
+            <span className='font-medium text-secondary'>{time.slice(0,10)}</span>
+            </div>
+            
+            
+            
+            <div className='flex justify-between'>
+            <span className='font-medium'>Years of Use: {use_years}years</span>
+            <span className='font-medium'><span className='flex items-center justify-center gap-1'>
+            <HiLocationMarker></HiLocationMarker> <span>{location}</span>
+                </span></span>
+            </div>
+
+           <div className='flex gap-10'>
+            <span className='font-medium text-lg text-error'>${resale_price}</span>
+            <span className='font-medium line-through text-gray-600'>${original_price}</span>
+           </div>
+            
+            
             <div className='flex justify-between mt-2'>
                 <button onClick={() => handleReportProduct(product)} className=' text-white rounded flex justify-center items-center uppercase text-base bg-red-500 py-1 px-2'>Report</button>
                 <div className="card-actions">

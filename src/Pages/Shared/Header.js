@@ -15,13 +15,14 @@ const Header = () => {
     const menu = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
         { user?.uid ? 
             <>
-            <li><Link to='/dashboard'>Dashboard</Link></li>
+            
             <li><button className='btn btn-primary rounded text-white' onClick={handleLogOut}>SignOut</button></li>
             </>
             :
-            <li><Link className='btn btn-primary rounded' to='/login'>Login</Link></li>
+            <li><Link className='btn btn-primary rounded text-white' to='/login'>Login</Link></li>
         }
     </React.Fragment>
 
@@ -38,8 +39,8 @@ const Header = () => {
             </div>
             <Link to='/' className="flex justify-center items-center normal-case text-xl">
                 <img className='w-8 md:w-14' src={logo} alt="" />
-                <span className="ml-2 text-lg md:text-2xl font-bold text-secondary font-Berkshire">
-                Laptop<span className='text-yellow-400'>ResaleZ.</span>
+                <span className="ml-2 text-lg md:text-2xl font-bold text-primary font-Berkshire">
+                Laptop<span className='text-neutral'>ResaleZ.</span>
                 </span>
             </Link>
         </div>

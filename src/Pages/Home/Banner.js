@@ -12,8 +12,8 @@ const Banner = () => {
   const { View } = useLottie(options);
 
     return (
-        <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="grid gap-10 lg:grid-cols-2">
+        <div className="container px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+      <div className="grid gap-20 md:gap-52 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           
           <div className="max-w-xl mb-6">
@@ -21,7 +21,7 @@ const Banner = () => {
               Buy. Sell.
               <br className="hidden md:block" />
               your product{' '}
-              <span className="inline-block text-yellow-400">
+              <span className="inline-block text-neutral">
                 Discover
               </span>
             </h2>

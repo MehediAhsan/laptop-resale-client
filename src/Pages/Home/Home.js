@@ -9,7 +9,7 @@ import Review from './Review';
 
 const Home = () => {
     return (
-        <div className='my-20'>
+        <div className='my-10'>
             <Banner></Banner>
             <AdvertisedItems></AdvertisedItems>
             <Categories></Categories>
