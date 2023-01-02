@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLottie } from "lottie-react";
 import resaleAnimation from "../../assets/resale.json";
+import Typewriter from 'typewriter-effect';
+
 
 const Banner = () => {
   const options = {
@@ -17,14 +19,18 @@ const Banner = () => {
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Buy. Sell.
-              <br className="hidden md:block" />
-              your product{' '}
-              <span className="inline-block text-neutral">
-                Discover
-              </span>
+            <h2 className="max-w-lg mb-4 font-sans text-3xl font-bold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
+              <Typewriter
+                        options={{
+                            strings: ['Buy ?', "Sell ?"],
+                            autoStart: true,
+                            loop: true,
+                            delay: 75
+                        }}
+                        />
+              
             </h2>
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl sm:leading-none">Let's Start...</h2>
             <p className="text-base text-gray-700 md:text-lg">
             LaptopResaleZ. website helps people to buy any second-hand product that is sell any seller.
             </p>
@@ -33,16 +39,9 @@ const Banner = () => {
             <Link
               to="/"
               aria-label=""
-              className="inline-flex items-center font-semibold transition-colors duration-200"
+              
             >
-              Learn more
-              <svg
-                className="inline-block w-3 ml-2"
-                fill="currentColor"
-                viewBox="0 0 12 12"
-              >
-                <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-              </svg>
+              <button class="px-6 py-2 text-green-100 rounded bg-gradient-to-r from-primary to-neutral">Button</button>
             </Link>
           </div>
         </div>

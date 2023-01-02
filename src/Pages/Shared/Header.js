@@ -13,9 +13,9 @@ const Header = () => {
     }
 
     const menu = <React.Fragment>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li className='font-semibold'><Link to='/'>Home</Link></li>
+        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
+        <li className='font-semibold'><Link to='/dashboard'>Dashboard</Link></li>
         { user?.uid ? 
             <>
             
@@ -27,7 +27,7 @@ const Header = () => {
     </React.Fragment>
 
     return (
-        <div className="navbar bg-base-100 flex justify-between">
+        <div className="navbar bg-base-100 w-full sticky top-0 z-50 flex justify-between shadow-[0_2px_1px_0px_rgb(0,0,0,0.1)]">
         <div className="navbar-start">
             <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

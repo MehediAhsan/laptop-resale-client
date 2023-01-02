@@ -5,14 +5,14 @@ import logo from '../../assets/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y-2 divide-orange-200 dark:bg-gray-100 dark:text-gray-800">
+        <footer className="px-4 divide-y-2 divide-orange-200 dark:bg-gray-100 dark:text-gray-800 font-medium border-t-red-300 border">
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <Link rel="noopener noreferrer" to="/" className="flex justify-center space-x-3 lg:justify-start">
                         <div className="flex items-center justify-center rounded-full">
                             <img className='w-14' src={logo} alt="" />
                         </div>
-                        <span className="self-center text-2xl font-semibold text-secondary font-Berkshire">Laptop<span className='text-yellow-400'>ResaleZ.</span></span>
+                        <span className="self-center text-2xl font-semibold text-primary font-Berkshire">Laptop<span className='text-neutral'>ResaleZ.</span></span>
                     </Link>
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

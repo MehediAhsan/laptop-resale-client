@@ -16,8 +16,8 @@ const Categories = () => {
     },[])
 
     return (
-        <div className='my-20'>
-            <h1 className='text-3xl md:text-4xl font-semibold text-center text-primary mb-10'>Product Categories</h1>
+        <div className='my-36'>
+            <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Product <span className='text-red-500'>Categories</span></h1>
             {
                 loading ? <Loader></Loader> :
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

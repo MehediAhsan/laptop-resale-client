@@ -4,8 +4,8 @@ import Banner from './Banner';
 import Categories from './Categories/Categories';
 import Contact from './Contact';
 import DiscountBanner from './DiscountBanner';
-import Faq from './Faq';
 import Review from './Review';
+import Starts from './Starts';
 
 const Home = () => {
     return (
@@ -15,7 +15,7 @@ const Home = () => {
             <Categories></Categories>
             <DiscountBanner></DiscountBanner>
             <Review></Review>
-            <Faq></Faq>
+            <Starts></Starts>
             <Contact></Contact>
         </div>
     );

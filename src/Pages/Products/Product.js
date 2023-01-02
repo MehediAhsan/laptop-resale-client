@@ -38,8 +38,8 @@ const Product = ({product}) => {
     return (
         <>
         { !paid && 
-        <div className="card bg-base-100 shadow-lg mx-4 md:mx-0 border border-red-300">
-        <figure><img className='md:w-full md:h-80 rounded' src={picture} alt="Album"/></figure>
+        <div data-aos="zoom-in-down" data-aos-duration="1000" className="card bg-base-100 shadow-lg mx-4 md:mx-0 border border-red-300">
+        <figure><img className='md:w-full md:h-80 rounded transition ease-in-out duration-700 hover:scale-125 ' src={picture} alt="Album"/></figure>
         <div className="card-body">
             <div className='flex justify-between'>
             <h2 className="card-title">{product_name}</h2>
