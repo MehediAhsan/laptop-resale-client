@@ -38,9 +38,9 @@ const Product = ({product}) => {
     return (
         <>
         { !paid && 
-        <div data-aos="zoom-in-down" data-aos-duration="1000" className="card bg-base-100 shadow-lg mx-4 md:mx-0 border border-red-300">
-        <figure><img className='md:w-full md:h-80 rounded transition ease-in-out duration-700 hover:scale-125 ' src={picture} alt="Album"/></figure>
-        <div className="card-body">
+        <div className="card bg-base-100 shadow-lg mx-4 md:mx-0 border border-red-300">
+        <figure><img className='w-full md:h-72 p-6 rounded transition ease-in-out duration-700 hover:scale-125 ' src={picture} alt="Album"/></figure>
+        <div className="card-body pt-0">
             <div className='flex justify-between'>
             <h2 className="card-title">{product_name}</h2>
             <div className='flex flex-row items-center gap-1 font-medium text-lg'>
@@ -51,10 +51,11 @@ const Product = ({product}) => {
             </div>
             </div>
             <p>{description}</p>
+            <span className='font-medium '>Posted Time: {time.slice(0,10)}</span>
             <div className='flex justify-between'>
             
             <span className='font-medium capitalize'>Product Condition: {condition}</span>
-            <span className='font-medium text-secondary'>{time.slice(0,10)}</span>
+            
             </div>
             
             
@@ -73,11 +74,11 @@ const Product = ({product}) => {
             
             
             <div className='flex justify-between mt-2'>
-                <button onClick={() => handleReportProduct(product)} className=' text-white rounded flex justify-center items-center uppercase text-base bg-red-500 py-1 px-2'>Report</button>
+                <button onClick={() => handleReportProduct(product)} className=' text-white rounded-full flex justify-center items-center uppercase text-base bg-red-500 py-1 px-3'>Report</button>
                 <div className="card-actions">
                 <label
                     htmlFor="product-booking-modal"
-                    className="rounded uppercase text-base bg-primary text-white py-2 cursor-pointer px-3"
+                    className="rounded-full uppercase text-base bg-primary text-white px-3 py-1 cursor-pointer"
                     onClick={() => setBookingProduct(product)}
                 >Book Now</label>
                 { 
