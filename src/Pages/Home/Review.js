@@ -2,11 +2,11 @@ import React from 'react';
 
 const Review = () => {
     return (
-        <section className="my-20 mb-3">
+        <section data-aos="fade-up"  className="my-20 mb-3">
             <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
                 <h1 className="text-2xl md:text-3xl font-semibold leading-none text-center text-primary mb-5">Customers <span className='text-red-500'>Reviews</span></h1>
             </div>
-            <div className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2 bg-red-50 p-8">
+            <div  className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2 bg-red-50 p-8">
                 <div className="flex flex-col items-center mx-12 lg:mx-0">
                     <div className="relative text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute top-0 left-0 w-8 h-8 dark:text-gray-700">

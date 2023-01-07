@@ -19,7 +19,7 @@ const Banner = () => {
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-4 font-sans text-3xl font-bold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
+            <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
               <Typewriter
                         options={{
                             strings: ['Buy ?', "Sell ?"],
@@ -30,18 +30,18 @@ const Banner = () => {
                         />
               
             </h2>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl sm:leading-none">Let's Start...</h2>
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-semibold tracking-tight text-gray-800 sm:text-4xl sm:leading-none">Let's Start...</h2>
             <p className="text-base text-gray-700 md:text-lg">
             LaptopResaleZ. website helps people to buy any second-hand product that is sell any seller.
             </p>
           </div>
-          <div className='text-primary font-bold'>
+          <div className='text-primary font-semibold'>
             <Link
               to="/"
               aria-label=""
               
             >
-              <button class="px-6 py-2 text-green-100 rounded bg-gradient-to-r from-primary to-neutral">Button</button>
+              <button class="px-4 py-1 text-green-100 rounded bg-gradient-to-r from-primary to-green-400">Button</button>
             </Link>
           </div>
         </div>

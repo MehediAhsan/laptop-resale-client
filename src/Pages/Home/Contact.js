@@ -11,9 +11,9 @@ const Contact = () => {
     const { View } = useLottie(options);
 
     return (
-        <div>
+        <div data-aos="fade-up" className='my-24'>
             <h1 className="mb-14 text-3xl md:text-3xl font-semibold leading-none text-center text-primary">Contact <span className='text-red-500'>Us</span></h1>
-            <div className="grid max-w-screen-xl grid-cols-1 gap-20 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-gray-800 bg-gray-200">
+            <div  className="grid max-w-screen-xl grid-cols-1 gap-20 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-gray-800 bg-gray-200">
 	<div className="flex flex-col justify-between ">
 		<div className="space-y-2">
 			<h2 className="text-3xl font-semibold leading-tight lg:text-4xl">Let's talk!</h2>
@@ -34,7 +34,7 @@ const Contact = () => {
 			<label for="message" className="text-sm">Message</label>
 			<textarea id="message" rows="3" className="w-full p-3 rounded border"></textarea>
 		</div>
-		<button className="w-full p-3 text-sm font-semibold tracking-wide uppercase rounded dark:bg-secondary text-white">Send Message</button>
+		<button className="w-full p-3 text-sm font-semibold tracking-wide uppercase rounded dark:bg-primary text-white">Send Message</button>
 	</form>
 </div>
         </div>
