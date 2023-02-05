@@ -30,8 +30,8 @@ const Banner = () => {
                         />
               
             </h2>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-semibold tracking-tight text-gray-800 sm:text-4xl sm:leading-none">Let's Start...</h2>
-            <p className="text-base text-gray-700 md:text-lg">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-semibold tracking-tight sm:text-4xl sm:leading-none">Let's Start...</h2>
+            <p className="text-base md:text-lg">
             LaptopResaleZ. website helps people to buy any second-hand product that is sell any seller.
             </p>
           </div>

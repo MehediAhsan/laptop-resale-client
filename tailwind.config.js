@@ -14,6 +14,28 @@ module.exports = {
           error: "#F42A2A",
           "base-100": "#F7F7F7",
         }
+      },
+      {
+        dark: {
+          
+          "primary": "#13c66d",
+                   
+          "secondary": "#2167f2",
+                   
+          "accent": "#c9ffb2",
+                   
+          "neutral": "#EE574C",
+                   
+          "base-100": "#242C34",
+                   
+          "info": "#48A1EA",
+                   
+          "success": "#168D46",
+                   
+          "warning": "#F7B02B",
+                   
+          "error": "#FD6384",
+        }
       }
     ]
   },

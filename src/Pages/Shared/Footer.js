@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y-2 divide-orange-200 dark:bg-gray-100 dark:text-gray-800 font-medium border-t-red-300 border">
+        <footer className="px-4 divide-y-2 divide-orange-200 font-medium ">
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <Link rel="noopener noreferrer" to="/" className="flex justify-center space-x-3 lg:justify-start">
@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-700">Services</h3>
+                        <h3 className="tracking-wide uppercase">Services</h3>
                         <ul className="space-y-1">
                             <li>
                                 <Link rel="noopener noreferrer" to="/">Hp</Link>
@@ -31,7 +31,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-700">Company</h3>
+                        <h3 className="tracking-wide uppercase">Company</h3>
                         <ul className="space-y-1">
                             <li>
                                 <Link rel="noopener noreferrer" to="/">Privacy</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="uppercase dark:text-gray-700">Developers</h3>
+                        <h3 className="uppercase">Developers</h3>
                         <ul className="space-y-1">
                             <li>
                                 <Link rel="noopener noreferrer" href="#">Public API</Link>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <div className="uppercase dark:text-gray-700">Social media</div>
+                        <div className="uppercase">Social media</div>
                         <div className="flex justify-start space-x-3">
                             <Link rel="noopener noreferrer" to="/" title="Facebook" className="flex items-center p-1">
                                 <FaFacebook></FaFacebook>
