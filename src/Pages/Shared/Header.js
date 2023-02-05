@@ -19,10 +19,10 @@ const Header = () => {
 
     useEffect(() => {
         if(dark){
-            document.querySelector("html").setAttribute("data-theme", "dark")
+            document.querySelector("html").setAttribute("data-theme", "mytheme")
         }
         else{
-            document.querySelector("html").setAttribute("data-theme", "mytheme")
+            document.querySelector("html").setAttribute("data-theme", "dark")
         }
     }, [dark])
 
@@ -71,7 +71,7 @@ const Header = () => {
             </ul>
             </div>
             <Link to='/' className="flex justify-center items-center normal-case text-xl">
-                <img className='w-8 md:w-14' src={logo} alt="" />
+                {/* <img className='w-8 md:w-14' src={logo} alt="" /> */}
                 <span className="ml-2 text-lg md:text-2xl font-bold text-primary font-Berkshire">
                 Laptop<span className='text-neutral'>ResaleZ.</span>
                 </span>

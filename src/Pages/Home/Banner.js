@@ -14,7 +14,7 @@ const Banner = () => {
   const { View } = useLottie(options);
 
     return (
-        <div className="container px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+        <div className="container px-4 mx-auto">
       <div className="grid gap-20 md:gap-52 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           

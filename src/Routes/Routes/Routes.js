@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <PrivateRoute><Products></Products></PrivateRoute>,
+                element: <Products></Products>,
                 loader: ({params}) => fetch(`https://laptop-resale-server.vercel.app/category/${params.id}`)
             },
             {
