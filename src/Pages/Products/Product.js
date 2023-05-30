@@ -78,7 +78,7 @@ const Product = ({product}) => {
                 <div className="card-actions">
                 <label
                     htmlFor="product-booking-modal"
-                    className="rounded-full uppercase text-base bg-primary text-white px-3 py-1 cursor-pointer"
+                    className="rounded-full uppercase border border-primary hover:bg-primary hover:text-black px-3 py-1 cursor-pointer"
                     onClick={() => setBookingProduct(product)}
                 >Book Now</label>
                 { 

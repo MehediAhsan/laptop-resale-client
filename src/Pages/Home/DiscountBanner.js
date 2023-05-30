@@ -21,7 +21,7 @@ const DiscountBanner = () => {
 				<span>Plus free shipping! Use code:</span>
 				<span className="font-bold text-lg text-red-500">resalelaptop</span>
 			</div>
-			<Link to="/" rel="noreferrer noopener" className="px-5 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Buy Now</Link>
+			<Link to="/" rel="noreferrer noopener" className="px-5 lg:mt-0 py-3 rounded-md border border-primary hover:bg-primary hover:text-black ">Buy Now</Link>
 		</div>
 	</div>
 </div>
