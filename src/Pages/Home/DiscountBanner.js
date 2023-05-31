@@ -11,7 +11,7 @@ const DiscountBanner = () => {
 	
 	  const { View } = useLottie(options);
     return (
-        <div data-aos="flip-up" className="   px-8 py-5">
+        <div data-aos="flip-up" data-aos-duration="1000" className="   px-8 py-5">
 	<div className="container mx-auto">
 		<div className="flex flex-col lg:flex-row items-center justify-between ">
 				<div className='w-72'>

@@ -16,7 +16,7 @@ const Banner = () => {
     return (
         <div className="container px-4 mx-auto">
       <div className="grid gap-20 md:gap-52 lg:grid-cols-2">
-        <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+        <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           
           <div className="max-w-xl mb-6">
             <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
@@ -45,7 +45,7 @@ const Banner = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center -mx-4">       
+        <div data-aos="fade-down" data-aos-duration="1000" className="flex items-center justify-center -mx-4">       
           {View}
         </div>
       </div>

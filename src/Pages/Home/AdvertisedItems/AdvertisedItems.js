@@ -16,7 +16,7 @@ const AdvertisedItems = () => {
     },[])
 
     return (
-        <div className='my-20'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='my-20'>
             {
                 loading ? <Loader></Loader> :
                 <>

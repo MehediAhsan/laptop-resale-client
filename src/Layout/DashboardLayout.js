@@ -15,12 +15,12 @@ const DashboardLayout = () => {
       <Header></Header>
       <div className="drawer drawer-mobile drawer-end">
         <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content bg-slate-100">
+        <div className="drawer-content">
           <Outlet></Outlet>
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 text-base-content bg-blue-300 font-semibold">
+          <ul className="menu p-4 w-80 text-black bg-primary font-semibold">
             {
               !isSeller && !isAdmin && <>
                 <li>

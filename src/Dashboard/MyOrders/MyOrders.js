@@ -6,10 +6,10 @@ import { AuthContext } from "../../contexts/AuthProvider";
 const MyOrders = () => {
   const { user } = useContext(AuthContext);
 
-  const url = `https://laptop-resale-server.vercel.app/bookings?email=${user?.email}`;
+  const url = `https://laptop-resale-server.vercel.app/booking?s?email=${user?.email}`;
 
   const { data: bookings = [] } = useQuery({
-    queryKey: ["bookings", user?.email],
+    queryKey: ["booking?s", user?.email],
     queryFn: async () => {
       const res = await fetch(url, {
         headers: {
@@ -39,21 +39,21 @@ const MyOrders = () => {
           </thead>
           <tbody>
             {
-                bookings?.map((booking,i) => <tr key={booking._id}>
+                bookings?.map((booking,i) => <tr key={booking?._id}>
                     <th>{i+1}</th>
-                    <td><img className="w-20" src={booking.picture} alt="" /></td>
-                    <td>{booking.product}</td>
-                    <td>${booking.price}</td>
+                    <td><img className="w-20" src={booking?.picture} alt="" /></td>
+                    <td>{booking?.product}</td>
+                    <td>${booking?.price}</td>
                     <td>
                       {
-                        booking.price && !booking.paid && <Link to={`/dashboard/payment/${booking._id}`}>
+                        booking?.price && !booking?.paid && <Link to={`/dashboard/payment/${booking?._id}`}>
                         <button
                         className="btn btn-primary btn-sm"
                         >Pay</button>
                         </Link>
                       }
                       {
-                        booking.price && booking.paid && <span className="text-primary">Paid</span>
+                        booking?.price && booking?.paid && <span className="text-primary">Paid</span>
                       }
                     </td>
                   </tr>)
