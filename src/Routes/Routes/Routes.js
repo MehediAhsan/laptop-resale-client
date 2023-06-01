@@ -15,6 +15,7 @@ import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 // import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import SellerRoute from "../SellerRoute/SellerRoute";
 
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard/myorders',
-                element: <MyOrders></MyOrders>
+                element: <PrivateRoute><MyOrders></MyOrders></PrivateRoute>
             },
             {
                 path: '/dashboard/addproduct',
