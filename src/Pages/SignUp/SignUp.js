@@ -81,7 +81,7 @@ const SignUp = () => {
 
 
     return (
-        <div className='w-96 mx-auto flex flex-col gap-2 shadow-lg p-7 rounded-lg my-20 border border-secondary'>
+        <div className='w-96 mx-auto flex flex-col gap-2 shadow-lg p-7 rounded-lg my-20 border border-primary'>
                 <h1 className='text-2xl font-medium text-center pb-5'>SignUp</h1>
                 <form onSubmit={handleSubmit(handleSignUp)}>    
                     <div className="form-control w-full">
@@ -126,14 +126,14 @@ const SignUp = () => {
                             <option value='seller'>seller</option>
                         </select>
                     </div> 
-                    <input className='btn btn-secondary w-full' type="submit" value="SignUp" />
+                    <input className='btn btn-primary w-full' type="submit" value="SignUp" />
                     <div>
                         {signUpError && <p className='text-red-500'>{signUpError}</p>}
                     </div>
                 </form>
-                <p>Already have an account? <Link to="/login" className='text-secondary'>Please Login</Link></p>
+                <p>Already have an account? <Link to="/login" className='text-primary'>Please Login</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-secondary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-primary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
     );
 };

@@ -75,7 +75,7 @@ const Login = () => {
     }
 
     return (
-            <div className='w-96 mx-auto flex flex-col gap-2 shadow-lg p-7 rounded-lg my-20 border border-secondary'>
+            <div className='w-96 mx-auto flex flex-col gap-2 shadow-lg p-7 rounded-lg my-20 border border-primary'>
                 <h1 className='text-2xl font-medium text-center pb-5'>Login</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>    
                     <div className="form-control w-full">
@@ -100,14 +100,14 @@ const Login = () => {
                         </label>
                         {errors.password && <p role="alert" className='text-red-500'>{errors.password?.message}</p>}
                     </div> 
-                    <input className='btn btn-secondary w-full' type="submit" value="Login" />
+                    <input className='btn btn-primary w-full' type="submit" value="Login" />
                     <div>
                         {loginError && <p className='text-red-500'>{loginError}</p>}
                     </div>
                 </form>
-                <p>New to Laptop Resale? <Link to="/signup" className='text-secondary'>Create new account</Link></p>
+                <p>New to Laptop Resale? <Link to="/signup" className='text-primary'>Create new account</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-secondary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-primary btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
     );
 };

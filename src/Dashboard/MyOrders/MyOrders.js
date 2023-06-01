@@ -6,10 +6,10 @@ import { AuthContext } from "../../contexts/AuthProvider";
 const MyOrders = () => {
   const { user } = useContext(AuthContext);
 
-  const url = `https://laptop-resale-server.vercel.app/booking?s?email=${user?.email}`;
+  const url = `https://laptop-resale-server.vercel.app/bookings?email=${user?.email}`;
 
   const { data: bookings = [] } = useQuery({
-    queryKey: ["booking?s", user?.email],
+    queryKey: ["bookings", user?.email],
     queryFn: async () => {
       const res = await fetch(url, {
         headers: {
