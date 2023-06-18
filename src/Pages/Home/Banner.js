@@ -41,7 +41,7 @@ const Banner = () => {
               aria-label=""
               
             >
-              <button class="px-4 py-1 rounded border border-primary hover:bg-primary hover:text-black ">Button</button>
+              <button class="px-4 py-1 rounded border border-primary hover:bg-primary hover:text-black ">Explore</button>
             </Link>
           </div>
         </div>
