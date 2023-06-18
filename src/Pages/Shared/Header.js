@@ -40,6 +40,7 @@ const Header = () => {
 
     const menu = <React.Fragment>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
+        <li className='font-semibold'><Link to='/products'>Products</Link></li>
         <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
         <li className='font-semibold'><Link to='/dashboard'>Dashboard</Link></li>
         <li className='font-semibold mr-2'>
