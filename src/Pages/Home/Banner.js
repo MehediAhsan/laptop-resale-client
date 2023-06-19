@@ -37,7 +37,7 @@ const Banner = () => {
           </div>
           <div className='text-primary font-semibold'>
             <Link
-              to="/"
+              to="/products"
               aria-label=""
               
             >

@@ -61,7 +61,7 @@ const Categories = () => {
             <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Product <span className='text-red-500'>Categories</span></h1>
             {
                 loading ? <Loader></Loader> :
-                <div className='px-5 md:px-14 xl:px-28'>
+                <div className='px-5 md:px-20 xl:px-28'>
                     {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 */}
                     <Slider {...settings}>
                 {

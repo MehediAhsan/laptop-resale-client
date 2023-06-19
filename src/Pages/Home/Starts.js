@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const Starts = () => {
     return (
-        <section data-aos="fade-up" className="p-4 my-32 md:p-8  container mx-auto">
+        <section data-aos="fade-up" data-aos-duration="1000" className="p-4 my-32 md:p-8  container mx-auto">
 	<div className="container grid grid-cols-1 gap-6 m-4 mx-auto md:m-0 md:grid-cols-2 xl:grid-cols-3">
 		<div className="flex overflow-hidden rounded-lg border">
 			<div className="flex items-center justify-center px-4 dark:bg-rose-400">
