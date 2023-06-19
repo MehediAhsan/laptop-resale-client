@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Category = ({category}) => {
-    const {_id, img, name} = category;
-    return (
-        <Link to={`/category/${_id}`} aria-label="View Item">
-        <div className="relative overflow-hidden transition duration-500 transform shadow-lg  hover:shadow-xl flex justify-center items-center  border-2 border-neutral hover:border-primary w-60 h-56 rounded-full">
-          {/* <img
-            className="object-cover w-52 p-10 h-52"
-            src={img}
-            alt=""
-          /> */}
-          <h1 className='font-bold text-5xl font-Berkshire text-accent'>{name}</h1>
+const Category = ({ category }) => {
+  const { _id, name } = category;
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
+  return (
+    <Link to={`/category/${_id}`} aria-label="View Item">
+      <div
+        className={`relative w-56 h-56 rounded-full overflow-hidden shadow-lg cursor-pointer transform transition duration-300 ${
+          hovered ? 'scale-105' : ''
+        }`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div
+          className={`absolute inset-0 bg-opacity-70 ${
+            hovered ? 'bg-primary' : 'bg-neutral'
+          } flex items-center justify-center transition-opacity duration-300`}
+        >
+          <h1
+            className={`text-2xl font-semibold ${
+              hovered ? 'text-white' : 'text-black'
+            }`}
+          >
+            {name}
+          </h1>
         </div>
-      </Link>
-    );
+      </div>
+    </Link>
+  );
 };
 
 export default Category;

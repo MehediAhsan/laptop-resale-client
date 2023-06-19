@@ -50,13 +50,13 @@ const Product = ({product}) => {
                 }
             </div>
             </div>
-            <p>{description}</p>
-            <span className='font-medium '>Posted Time: {time.slice(0,10)}</span>
-            <div className='flex justify-between'>
+            <p>{description.slice(0,40)}...</p>
+            {/* <span className='font-medium '>Posted Time: {time.slice(0,10)}</span> */}
+            {/* <div className='flex justify-between'>
             
             <span className='font-medium capitalize'>Product Condition: {condition}</span>
             
-            </div>
+            </div> */}
             
             
             
@@ -67,9 +67,9 @@ const Product = ({product}) => {
                 </span></span>
             </div>
 
-           <div className='flex gap-10'>
-            <span className='font-medium text-lg text-error'>${resale_price}</span>
-            <span className='font-medium line-through text-gray-600'>${original_price}</span>
+           <div className='flex gap-4'>
+            <span className='font-medium text-2xl text-error'>${resale_price}</span>
+            <span className='font-medium line-through text-gray-400 mt-2'>${original_price}</span>
            </div>
             
             

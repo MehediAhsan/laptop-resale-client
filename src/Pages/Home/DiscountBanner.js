@@ -1,31 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLottie } from "lottie-react";
-import discountAnimation from "../../assets/discount.json";
+import { useLottie } from 'lottie-react';
+import discountAnimation from '../../assets/discount.json';
 
 const DiscountBanner = () => {
-	const options = {
-		animationData: discountAnimation,
-		loop: true
-	  };
-	
-	  const { View } = useLottie(options);
-    return (
-        <div data-aos="flip-up" data-aos-duration="1000" className="   px-8 py-5">
-	<div className="container mx-auto">
-		<div className="flex flex-col lg:flex-row items-center justify-between ">
-				<div className='w-72'>
-				{View}
-				</div>
-			<div className="space-x-2 text-center text-xl">
-				<span>Plus free shipping! Use code:</span>
-				<span className="font-bold text-lg text-red-500">resalelaptop</span>
-			</div>
-			<Link to="/" rel="noreferrer noopener" className="px-5 lg:mt-0 py-3 rounded-md border border-primary hover:bg-primary hover:text-black ">Buy Now</Link>
-		</div>
-	</div>
-</div>
-    );
+  const options = {
+    animationData: discountAnimation,
+    loop: true,
+    autoplay: true
+  };
+
+  const { View } = useLottie(options);
+
+  return (
+    <div className="px-8 py-5 bg-gray-900 text-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+        <div className="w-72">{View}</div>
+        <div className="flex flex-col items-center lg:items-start space-y-2 text-center lg:text-left">
+          <span className="text-xl font-semibold">Enjoy a discount!</span>
+          <span className="text-lg">
+            Plus free shipping on all orders. Use code: <span className="text-primary-dark">resalelaptop</span>
+          </span>
+        </div>
+        <Link
+          to="/"
+          className="px-5 py-3 rounded-md bg-neutral text-white font-semibold hover:bg-primary-dark transition duration-300"
+        >
+          Shop Now
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default DiscountBanner;
