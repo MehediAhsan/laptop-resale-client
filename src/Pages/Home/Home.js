@@ -11,7 +11,7 @@ import Team from './Team';
 
 const Home = () => {
     return (
-        <div className='my-10'>
+        <div className='my-10 overflow-hidden'>
             <Banner></Banner>
             <AdvertisedItems></AdvertisedItems>
             <Categories></Categories>
