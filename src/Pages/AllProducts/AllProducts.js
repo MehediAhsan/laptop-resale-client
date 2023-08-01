@@ -99,7 +99,7 @@ const AllProducts = () => {
         />
         <button
           onClick={handleVoiceSearch}
-          className='ml-2 px-3 py-1 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary bg-rose-500 text-white font-bold'
+          className='ml-2 px-3 py-1 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary bg-rose-500 text-blue-500 font-bold'
         >
           🎤
         </button>
