@@ -23,7 +23,7 @@ const DiscountBanner = () => {
           </span>
         </div>
         <Link
-          to="/"
+          to="/products"
           className="px-5 py-3 rounded-md bg-neutral text-white font-semibold hover:bg-primary-dark transition duration-300"
         >
           Shop Now
