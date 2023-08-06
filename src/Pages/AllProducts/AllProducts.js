@@ -85,7 +85,7 @@ const AllProducts = () => {
   };
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className='my-20'>
+    <div className='my-20'>
       <h1 className='text-3xl md:text-3xl font-semibold text-center text-accent mb-4'>
         Total {products.length} Products Available 💻
       </h1>

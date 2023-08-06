@@ -11,7 +11,7 @@ const Contact = () => {
     const { View } = useLottie(options);
 
     return (
-        <div data-aos="fade-up" className='my-24'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='my-24'>
             <h1 className="mb-14 text-3xl md:text-3xl font-semibold leading-none text-center text-primary">Contact <span className='text-red-500'>Us</span></h1>
             <div  className="grid max-w-screen-xl grid-cols-1 gap-20 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 border border-primary">
 	<div className="flex flex-col justify-between ">

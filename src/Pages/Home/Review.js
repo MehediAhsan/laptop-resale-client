@@ -26,7 +26,7 @@ const Review = () => {
   ];
 
   return (
-    <section data-aos="fade-up" className="my-20 mb-3">
+    <section data-aos="fade-up" data-aos-duration="1000" className="my-20 mb-3">
       <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
         <h1 className="text-2xl md:text-3xl font-semibold leading-none text-center text-primary mb-5">
           Customers <span className="text-red-500">Reviews</span>
