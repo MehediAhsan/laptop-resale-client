@@ -13,7 +13,7 @@ const DiscountBanner = () => {
   const { View } = useLottie(options);
 
   return (
-    <div data-aos="zoom-in-right" data-aos-duration="1000" className="px-8 py-5 bg-gray-900 text-white">
+    <div data-aos="zoom-in-right" data-aos-duration="1000" className="px-8 py-5 border border-primary text-white rounded">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
         <div className="w-72">{View}</div>
         <div className="flex flex-col items-center lg:items-start space-y-2 text-center lg:text-left">
