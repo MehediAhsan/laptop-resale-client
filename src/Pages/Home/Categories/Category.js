@@ -16,7 +16,7 @@ const Category = ({ category }) => {
   return (
     <Link to={`/category/${_id}`} aria-label="View Item">
       <div
-        className={`relative w-56 h-56 rounded-full overflow-hidden shadow-lg cursor-pointer transform transition duration-300 ${
+        className={`relative w-56 h-56 my-16 ml-16 rounded-full overflow-hidden shadow-lg cursor-pointer transform transition duration-300 ${
           hovered ? 'scale-105' : ''
         }`}
         onMouseEnter={handleMouseEnter}
