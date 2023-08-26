@@ -58,7 +58,7 @@ const Categories = () => {
 
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className='my-36'>
-            <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Product <span className='text-red-500'>Categories</span></h1>
+            <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Product <span className='text-neutral'>Categories</span></h1>
             {
                 loading ? <Loader></Loader> :
                 <div className='px-5 md:px-20 xl:px-28'>

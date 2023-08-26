@@ -19,7 +19,7 @@ const Banner = () => {
         <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
+            <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold tracking-tight text-neutral sm:text-4xl sm:leading-none">
               <Typewriter
                         options={{
                             strings: ['Buy ?', "Sell ?"],

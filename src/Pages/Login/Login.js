@@ -83,7 +83,7 @@ const Login = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" {...register("email", {required:"Email Address is required"}, )} className="input input-bordered w-full" />
-                        {errors.email && <p role="alert" className='text-red-500'>{errors.email?.message}</p>}
+                        {errors.email && <p role="alert" className='text-neutral'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
@@ -98,11 +98,11 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Forgot Password ?</span>
                         </label>
-                        {errors.password && <p role="alert" className='text-red-500'>{errors.password?.message}</p>}
+                        {errors.password && <p role="alert" className='text-neutral'>{errors.password?.message}</p>}
                     </div> 
                     <input className='btn btn-primary w-full' type="submit" value="Login" />
                     <div>
-                        {loginError && <p className='text-red-500'>{loginError}</p>}
+                        {loginError && <p className='text-neutral'>{loginError}</p>}
                     </div>
                 </form>
                 <p>New to Laptop Resale? <Link to="/signup" className='text-primary'>Create new account</Link></p>

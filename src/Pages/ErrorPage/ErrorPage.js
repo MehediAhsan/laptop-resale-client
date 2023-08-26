@@ -16,7 +16,7 @@ const ErrorPage = () => {
         {error && (
           <div className='flex font-semibold text-xl gap-2'>
             <p>{error.status}</p>
-            <p className='text-red-500'>{error.statusText || error.message}</p> 
+            <p className='text-neutral'>{error.statusText || error.message}</p> 
           </div>
         )}
         <Link to='/' className='px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900'>Back to homepage</Link>

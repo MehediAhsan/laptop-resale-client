@@ -89,14 +89,14 @@ const SignUp = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <input type="text" {...register("name", {required:"Name is required"}, )} className="input input-bordered w-full" />
-                        {errors.name && <p role="alert" className='text-red-500'>{errors.email?.message}</p>}
+                        {errors.name && <p role="alert" className='text-neutral'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" {...register("email", {required:"Email Address is required"}, )} className="input input-bordered w-full" />
-                        {errors.email && <p role="alert" className='text-red-500'>{errors.email?.message}</p>}
+                        {errors.email && <p role="alert" className='text-neutral'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
@@ -115,7 +115,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text">Forgot Password ?</span>
                         </label>
-                        {errors.password && <p role="alert" className='text-red-500'>{errors.password?.message}</p>}
+                        {errors.password && <p role="alert" className='text-neutral'>{errors.password?.message}</p>}
                     </div>
                     <div className="form-control w-full mb-5">
                         <label className="label">
@@ -128,7 +128,7 @@ const SignUp = () => {
                     </div> 
                     <input className='btn btn-primary w-full' type="submit" value="SignUp" />
                     <div>
-                        {signUpError && <p className='text-red-500'>{signUpError}</p>}
+                        {signUpError && <p className='text-neutral'>{signUpError}</p>}
                     </div>
                 </form>
                 <p>Already have an account? <Link to="/login" className='text-primary'>Please Login</Link></p>

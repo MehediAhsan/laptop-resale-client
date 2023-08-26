@@ -129,7 +129,7 @@ const CheckoutForm = ({booking}) => {
           Pay
         </button>
       </form>
-      <p className="text-red-500">{cardError}</p>
+      <p className="text-neutral">{cardError}</p>
       {
         success && <div>
             <p className="text-green-500">{success}</p>

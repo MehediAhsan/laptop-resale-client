@@ -5,7 +5,7 @@ const Team = () => {
         
 <section data-aos="fade-up" data-aos-duration="1000" class=" mx-auto px-4 sm:px-6 lg:px-4 ">
     <div class="text-center pb-14">
-    <h1 className=" text-3xl md:text-3xl font-semibold leading-none text-center text-primary">Team <span className='text-red-500'>Members</span></h1>
+    <h1 className=" text-3xl md:text-3xl font-semibold leading-none text-center text-primary">Team <span className='text-neutral'>Members</span></h1>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-14">
         <div class="w-full border border-red-300 rounded-lg p-12 flex flex-col justify-center items-center ">
