@@ -5,10 +5,10 @@ const Blog = () => {
     
 <section class="my-20">
     <div class="container px-6 py-10 mx-auto">
-        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl font-semibold capitalize lg:text-4xl">Our latest blog</h1>
+        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl font-semibold capitalize lg:text-4xl text-center pb-10">Our latest blog</h1>
 
-        <div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            <div class="lg:flex">
+        <div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 gap-14 mt-8 md:mt-16 md:grid-cols-2">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -20,7 +20,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="lg:flex">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -32,7 +32,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="lg:flex">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -44,7 +44,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="lg:flex">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -56,7 +56,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="lg:flex">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -68,7 +68,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="lg:flex">
+            <div class="lg:flex border rounded-2xl p-2">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
