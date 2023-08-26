@@ -16,7 +16,7 @@ const AdvertisedItems = () => {
     },[])
 
     return (
-        <div className='my-20'>
+        <div className='mt-52 md:mt-4'>
             {
                 loading ? <Loader></Loader> :
                 <>
