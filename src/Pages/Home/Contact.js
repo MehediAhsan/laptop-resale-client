@@ -24,15 +24,15 @@ const Contact = () => {
 	<form className="space-y-6 ng-untouched ng-pristine mt-14">
 		<div>
 			<label for="name" className="text-sm">Full name</label>
-			<input id="name" type="text" placeholder="" className="w-full p-3 rounded border" />
+			<input id="name" type="text" placeholder="" className="w-full p-3 rounded border text-black" />
 		</div>
 		<div>
 			<label for="email" className="text-sm">Email</label>
-			<input id="email" type="email" className="w-full p-3 rounded border" />
+			<input id="email" type="email" className="w-full p-3 rounded border text-black" />
 		</div>
 		<div>
 			<label for="message" className="text-sm">Message</label>
-			<textarea id="message" rows="3" className="w-full p-3 rounded border"></textarea>
+			<textarea id="message" rows="3" className="w-full p-3 rounded border text-black"></textarea>
 		</div>
 		<button className="w-full p-3 text-sm font-semibold tracking-wide uppercase rounded border border-primary hover:bg-primary hover:text-black ">Send Message</button>
 	</form>
