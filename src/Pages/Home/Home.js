@@ -2,6 +2,7 @@ import React from 'react';
 import AboutUs from './AboutUs';
 import AdvertisedItems from './AdvertisedItems/AdvertisedItems';
 import Banner from './Banner';
+import BenefitsSection from './BenefitsSection ';
 import Categories from './Categories/Categories';
 import Contact from './Contact';
 import DiscountBanner from './DiscountBanner';
@@ -19,6 +20,7 @@ const Home = () => {
             <Review></Review>
             <AboutUs></AboutUs>
             <Starts></Starts>
+            <BenefitsSection></BenefitsSection>
             <Team></Team>
             <Contact></Contact>
         </div>
