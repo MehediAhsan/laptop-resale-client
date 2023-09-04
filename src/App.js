@@ -9,7 +9,7 @@ AOS.init();
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-Lato">
       <RouterProvider router={router}></RouterProvider>
       <Toaster></Toaster>
     </div>
