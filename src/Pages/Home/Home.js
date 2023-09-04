@@ -6,6 +6,7 @@ import BenefitsSection from './BenefitsSection ';
 import Categories from './Categories/Categories';
 import Contact from './Contact';
 import DiscountBanner from './DiscountBanner';
+import LaptopTimeline from './LaptopTimeline';
 import Review from './Review';
 import Starts from './Starts';
 import Team from './Team';
@@ -21,6 +22,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <Starts></Starts>
             <BenefitsSection></BenefitsSection>
+            <LaptopTimeline></LaptopTimeline>
             <Team></Team>
             <Contact></Contact>
         </div>
