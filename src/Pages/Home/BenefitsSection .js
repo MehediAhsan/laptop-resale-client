@@ -25,10 +25,10 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white py-16">
+    <section className=" text-white py-16 pb-36">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-8">
-          Why Choose Us?
+        <h2 className="text-3xl font-semibold mb-14 text-primary">
+          Why <span className='text-neutral'>Choose Us?</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
@@ -38,7 +38,7 @@ const BenefitsSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="mb-4 text-red-500">{benefit.icon}</div>
-              <h3 className="text-2xl font-semibold mb-4">{benefit.title}</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-secondary">{benefit.title}</h3>
               <p className="text-gray-800">{benefit.description}</p>
             </motion.div>
           ))}
