@@ -1,6 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
+    const discussionsData = [
+        {
+          id: 1,
+          title: 'How to Choose the Right Laptop for Gaming?',
+          summary: 'Looking for advice on selecting a gaming laptop? Share your thoughts here!',
+          author: 'John Doe',
+          authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
+          image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        },
+        {
+          id: 2,
+          title: 'Troubleshooting Common Laptop Issues',
+          summary: 'Discuss and troubleshoot common laptop problems with the community.',
+          author: 'Jane Smith',
+          authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
+          image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        },
+        {
+          id: 3,
+          title: 'Best Laptops for Programming in 2023',
+          summary: 'Share your recommendations and experiences with laptops for coding.',
+          author: 'Alice Johnson',
+          authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
+          image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        },
+        // Add more discussions as needed
+      ];
   return (
     
 <section class="my-20">
@@ -81,6 +109,44 @@ const Blog = () => {
             </div>
         </div>
     </div>
+
+    <section className="py-12 px-6">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-semibold mb-14 text-center">
+          Forum Highlights
+        </h2>
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {discussionsData.map((discussion) => (
+            <div
+              key={discussion.id}
+              className=" rounded-lg shadow-md overflow-hidden"
+            >
+              <img
+                src={discussion.image}
+                alt={discussion.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4">
+                  <Link to={`/forum/${discussion.id}`}>
+                    {discussion.title}
+                  </Link>
+                </h3>
+                <p className="mb-4">{discussion.summary}</p>
+                <div className="flex items-center">
+                  <img
+                    src={discussion.authorAvatar}
+                    alt={discussion.author}
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <p className="ml-2">{discussion.author}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 </section>
   );
 };

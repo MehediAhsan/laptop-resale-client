@@ -74,7 +74,7 @@ const Header = () => {
             </div>
             <Link to='/' className="flex justify-center items-center normal-case text-xl">
                 {/* <img className='w-8 md:w-14' src={logo} alt="" /> */}
-                <span className="ml-2 text-lg md:text-2xl font-bold text-primary font-Berkshire w-36 sm:w-full">
+                <span className="ml-2 text-lg md:text-2xl font-semibold text-primary font-Berkshire w-36 sm:w-full">
                 Laptop <span className='text-neutral'>ResaleZ.</span>
                 </span>
             </Link>

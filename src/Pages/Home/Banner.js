@@ -30,12 +30,12 @@ const Banner = () => {
                         />
               
             </h2>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-semibold tracking-tight sm:text-4xl sm:leading-none">Let's Start...</h2>
+            <h2 className="max-w-lg mb-6 font-sans text-3xl  tracking-tight sm:text-4xl sm:leading-none">Let's Start...</h2>
             <p className="text-base md:text-lg">
             LaptopResaleZ. website helps people to buy any second-hand product that is sell any seller.
             </p>
           </div>
-          <div className='text-primary font-semibold'>
+          <div className='text-primary font-medium'>
             <Link
               to="/products"
               aria-label=""
