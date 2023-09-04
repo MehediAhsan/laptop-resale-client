@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-gray-500">© 2022 LaptopResaleZ. All rights reserved.</div>
+            <div className="py-6 text-sm text-center">© 2022 LaptopResaleZ. All rights reserved.</div>
         </footer>
     );
 };

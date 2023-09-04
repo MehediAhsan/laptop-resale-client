@@ -2,12 +2,12 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
-        <section data-aos="fade-up" data-aos-duration="1000" className=" text-accent py-20">
+        <section data-aos="fade-up" data-aos-duration="1000" className=" py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
           <div data-aos="fade-right" data-aos-duration="1000" className="flex items-center">
             <div className="mr-8">
-              <h2 className="text-4xl font-bold mb-4 text-primary">About Our Company</h2>
+              <h2 className="text-3xl font-bold mb-4 text-secondary">About Our Company</h2>
               <p className="text-lg mb-6">
                 Laptop Hub is a leading provider of high-quality, pre-owned laptops. With a passion for technology and a commitment to sustainability, we offer a wide range of refurbished laptops at affordable prices.
               </p>
