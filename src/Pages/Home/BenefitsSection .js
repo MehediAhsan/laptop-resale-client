@@ -34,10 +34,10 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+              className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 shadow-secondary cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="mb-4 text-red-500">{benefit.icon}</div>
+              <div className="mb-4 text-red-500 text-center">{benefit.icon}</div>
               <h3 className="text-2xl font-semibold mb-4 text-secondary">{benefit.title}</h3>
               <p className="text-gray-800">{benefit.description}</p>
             </motion.div>
