@@ -86,22 +86,22 @@ const AllProducts = () => {
 
   return (
     <div className='my-20'>
-      <h1 className='text-3xl md:text-3xl font-semibold text-center text-accent mb-4'>
+      <h1 className='text-2xl md:text-3xl font-semibold text-center text-accent mb-4'>
         Total {products.length} Products Available 💻
       </h1>
-      <div className='flex justify-center my-12'>
+      <div className='flex justify-center my-12 w-96 py-2 rounded-full mx-auto shadow shadow-secondary'>
         <input
           type='text'
           placeholder='Search by product name...'
           value={searchTerm}
           onChange={handleSearchChange}
-          className='px-4 py-2 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary text-neutral text-lg font-semibold'
+          className='px-8 py-2 rounded-md focus:outline-none focus:ring-0 text-neutral text-xl font-medium bg-transparent w-80'
         />
         <button
           onClick={handleVoiceSearch}
-          className='ml-2 px-3 py-1 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary bg-rose-500 text-blue-500 font-bold'
+          className='mr-2 p-1  rounded-full focus:outline-none focus:ring-1 focus:ring-secondary font-bold text-3xl'
         >
-          🎤
+          🎙️
         </button>
       </div>
       {loading ? (
