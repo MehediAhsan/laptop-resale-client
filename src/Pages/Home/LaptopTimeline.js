@@ -68,7 +68,7 @@ const LaptopTimeline = () => {
         <h2 className="text-3xl font-semibold text-center mb-14 text-primary">
           Laptop <span className="text-neutral">History Timeline</span>
         </h2>
-        <div className="relative">
+        <div className="relative shadow-md shadow-secondary">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full mr-4"
