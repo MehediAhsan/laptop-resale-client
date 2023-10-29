@@ -75,21 +75,21 @@ const Login = () => {
     }
 
     return (
-            <div className='w-96 mx-auto flex flex-col gap-2 shadow-lg p-7 rounded-lg my-20 border border-primary'>
+            <div className='w-96 mx-auto flex flex-col gap-2 p-7 rounded-lg my-20 shadow shadow-secondary'>
                 <h1 className='text-2xl font-medium text-center pb-5'>Login</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>    
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" {...register("email", {required:"Email Address is required"}, )} className="input input-bordered w-full" />
+                        <input type="email" placeholder='Write your email...' {...register("email", {required:"Email Address is required"}, )} className="input input-bordered w-full" />
                         {errors.email && <p role="alert" className='text-neutral'>{errors.email?.message}</p>}
                     </div>
-                    <div className="form-control w-full">
+                    <div className="form-control w-full my-4">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password"
+                        <input type="password" placeholder='Write your password...'
                          {...register("password", {
                             required:"Password is required",
                             minLength: { value: 6, message: "Password must be 6 charecters or longer" }
