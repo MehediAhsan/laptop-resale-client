@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollUp } from '../../helpers/ScrollUp';
 import AboutUs from './AboutUs';
 import AdvertisedItems from './AdvertisedItems/AdvertisedItems';
 import Banner from './Banner';
@@ -12,6 +13,7 @@ import Starts from './Starts';
 import Team from './Team';
 
 const Home = () => {
+    ScrollUp();
     return (
         <div className='my-10 overflow-hidden'>
             <Banner></Banner>
