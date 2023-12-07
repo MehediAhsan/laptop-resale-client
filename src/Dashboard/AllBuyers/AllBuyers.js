@@ -18,7 +18,7 @@ const AllBuyers = () => {
     })
 
     const handleDeleteBuyer = buyer => {
-        fetch(`https://laptop-resale-server.vercel.app/users/${buyer._id}`, {
+        fetch(`https://laptop-resale-server.vercel.app/users/${buyer?._id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -44,9 +44,9 @@ const AllBuyers = () => {
           </thead>
           <tbody>
             {
-                buyers?.map((buyer) => <tr key={buyer._id}>
-                    <td>{buyer.name}</td>
-                    <td>{buyer.email}</td>
+                buyers?.map((buyer) => <tr key={buyer?._id}>
+                    <td>{buyer?.name}</td>
+                    <td>{buyer?.email}</td>
                     <td>
                         <button onClick={() => handleDeleteBuyer(buyer)} className="btn btn-xs btn-error">Delete</button>
                     </td>
