@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Product from '../Products/Product';
 import Loader from '../Shared/Loader';
+import { ScrollUp } from './../../helpers/ScrollUp';
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -83,6 +84,8 @@ const AllProducts = () => {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  ScrollUp();
 
   return (
     <div className='my-16'>
