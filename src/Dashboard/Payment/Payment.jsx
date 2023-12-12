@@ -5,7 +5,7 @@ import { useLoaderData, useNavigation } from "react-router-dom";
 import Loader from "../../Pages/Shared/Loader";
 import CheckoutForm from "./CheckoutForm";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
 
 const Payment = () => {
   const booking = useLoaderData();
