@@ -1,6 +1,6 @@
-import React from 'react';
-import { FaBriefcase, FaUsers, FaChartBar } from 'react-icons/fa';
-import CountUp from 'react-countup';
+import React from "react";
+import { FaBriefcase, FaUsers, FaChartBar } from "react-icons/fa";
+import CountUp from "react-countup";
 
 const Stats = () => {
   return (
@@ -11,14 +11,18 @@ const Stats = () => {
             <div className="flex items-center justify-center w-12 h-12 bg-rose-400 rounded-full mb-4">
               <FaBriefcase className="text-white text-2xl text-center" />
             </div>
-            <h3 className="text-3xl font-semibold text-center"><CountUp start={0} end={200} duration={20} />+</h3>
+            <h3 className="text-3xl font-semibold text-center">
+              <CountUp start={0} end={200} duration={20} />+
+            </h3>
             <p className="text-center text-xl">Projects</p>
           </div>
           <div className="p-6 text-primary shadow-md rounded-lg shadow-secondary -skew-x-1 -skew-y-1 cursor-pointer">
             <div className="flex items-center justify-center w-12 h-12 bg-rose-400 rounded-full mb-4">
               <FaUsers className="text-white text-2xl text-center" />
             </div>
-            <h3 className="text-3xl font-semibold text-center"><CountUp start={0} end={5000} duration={20} />+</h3>
+            <h3 className="text-3xl font-semibold text-center">
+              <CountUp start={0} end={5000} duration={20} />+
+            </h3>
             <p className="text-center text-xl">Clients</p>
           </div>
           <div className="p-6 text-primary shadow-md rounded-lg shadow-secondary -skew-x-1 -skew-y-1 cursor-pointer">

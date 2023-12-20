@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import SectionTitle from '../../../components/SectionTitle';
 import Product from '../../Products/Product';
 import Loader from '../../Shared/Loader';
 
@@ -16,11 +17,11 @@ const AdvertisedItems = () => {
     },[])
 
     return (
-        <div className='mt-52 md:mt-4'>
+        <div className='my-5'>
             {
                 loading ? <Loader></Loader> :
                 <>
-                <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Advertised <span className='text-neutral'>Items</span></h1>
+                <SectionTitle one={"Advertised"} two={"Items"}></SectionTitle>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-5'>
                     {
                         products.map(product => <Product key={product._id} product={product}></Product>)
