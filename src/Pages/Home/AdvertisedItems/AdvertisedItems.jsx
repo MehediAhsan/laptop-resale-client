@@ -21,7 +21,7 @@ const AdvertisedItems = () => {
                 loading ? <Loader></Loader> :
                 <>
                 <h1 className='text-3xl md:text-3xl font-semibold text-center text-primary mb-20'>Advertised <span className='text-neutral'>Items</span></h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-5'>
                     {
                         products.map(product => <Product key={product._id} product={product}></Product>)
                     }

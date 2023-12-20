@@ -111,7 +111,7 @@ const AllProducts = () => {
         <Loader />
       ) : (
         <>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-5'>
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
                 <Product key={product._id} product={product} />

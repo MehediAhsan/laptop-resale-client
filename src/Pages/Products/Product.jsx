@@ -51,26 +51,26 @@ const Product = ({ product }) => {
   return (
     <>
       {!paid && (
-        <div className="bg-base-100 shadow mx-4 md:mx-0 rounded shadow-primary">
+        <div className="bg-base-100 shadow rounded shadow-primary">
           <figure>
             <img
-              className="w-full h-72 pb-4 rounded"
+              className="w-full h-64 rounded"
               src={picture}
               alt="Album"
             />
           </figure>
-          <div className="card-body pt-0">
-            <div className="flex justify-between">
+          <div className="card-body flex flex-col gap-4 pt-4">
+            <div className="flex justify-center items-center gap-1">
               <h2 className="card-title font-medium text-secondary">{product_name}</h2>
-              <div className="flex flex-row items-center justify-center gap-1 font-medium">
-                <span>{seller_name}</span>
+              <div className="flex flex-row items-center justify-center gap-1 font-medium text-sm">
+                <span>({seller_name})</span>
                 {seller.verified && (
                   <IoCheckmarkCircleOutline className="text-xl font-semibold text-neutral" />
                 )}
               </div>
             </div>
-            <p className="text-sm font-light">{description.slice(0, 40)}...</p>
-            <div className="flex justify-between">
+            <p className="text-sm font-light text-center">{description.slice(0, 40)}...</p>
+            <div className="flex justify-center gap-2">
               <span className="font-medium">
                 Used: {use_years} years
               </span>
@@ -81,16 +81,16 @@ const Product = ({ product }) => {
               </span>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <span className="font-medium text-2xl text-error">
                 ${resale_price}
               </span>
-              <span className="font-medium line-through text-gray-400 mt-2">
+              <span className="font-medium text-sm line-through text-gray-400 mt-2">
                 ${original_price}
               </span>
             </div>
 
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-center gap-8">
               <button
                 onClick={() => handleReportProduct(product)}
                 className=" text-white rounded-full flex justify-center items-center text-base bg-neutral py-1 px-4"

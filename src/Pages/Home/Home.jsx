@@ -15,7 +15,7 @@ import Team from './Team';
 const Home = () => {
     ScrollUp();
     return (
-        <div className='my-10 overflow-hidden'>
+        <div className='my-6 overflow-hidden'>
             <Banner></Banner>
             <AdvertisedItems></AdvertisedItems>
             <Categories></Categories>
