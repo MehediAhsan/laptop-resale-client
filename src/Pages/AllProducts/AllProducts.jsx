@@ -89,7 +89,7 @@ const AllProducts = () => {
 
   return (
     <div className='my-16'>
-      <h1 className='text-2xl md:text-3xl font-semibold text-center text-secondary mb-4'>
+      <h1 className='text-2xl md:text-3xl font-medium text-center text-secondary mb-4'>
         Total {products.length} Products Available 💻
       </h1>
       <div className='flex justify-center my-12 w-96 py-2 rounded-full mx-auto shadow shadow-secondary'>
