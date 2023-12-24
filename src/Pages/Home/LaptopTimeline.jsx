@@ -83,7 +83,7 @@ const LaptopTimeline = () => {
         <div className="relative shadow-md shadow-secondary">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full mr-4"
+              className="border hover:bg-secondary cursor-pointer text-white font-semibold px-4 py-2 rounded-full mr-4"
               onClick={() => navigateTimeline("prev")}
               disabled={currentLaptopIndex === 0}
             >
@@ -92,7 +92,7 @@ const LaptopTimeline = () => {
           </div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full ml-4"
+              className="border hover:bg-secondary text-white font-semibold px-4 py-2 rounded-full ml-4"
               onClick={() => navigateTimeline("next")}
               disabled={currentLaptopIndex === laptopData.length - 1}
             >
@@ -103,7 +103,7 @@ const LaptopTimeline = () => {
             <img
               src={currentLaptop.image}
               alt={`Laptop - ${currentLaptop.name}`}
-              className="w-full h-48 object-cover object-center"
+              className="w-full h-64 object-contain object-center"
             />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">

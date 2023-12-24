@@ -31,9 +31,8 @@ const Review = () => {
 
   return (
     <section data-aos="fade-up" data-aos-duration="1000" className="mb-20">
-      <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
-        <SectionTitle one={"Customers"} two={"Reviews"}></SectionTitle>
-      </div>
+      <SectionTitle one={"Customers"} two={"Reviews"}></SectionTitle>
+
       <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
         {reviews.map((review) => (
           <div
@@ -41,18 +40,16 @@ const Review = () => {
             className="flex flex-col max-w-sm mx-4 my-6 rounded-lg shadow shadow-secondary"
           >
             <div className="px-4 py-8">
-              <p className="text-lg italic text-center mb-4">{review.review}</p>
+              <p className=" italic text-center mb-4">{review.review}</p>
             </div>
             <div className="flex flex-col items-center justify-center p-8 border-t-2 border-secondary">
               <img
                 src={review.avatar}
                 alt={review.name}
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full shadow-md"
+                className="w-16 h-16 mb-3 -mt-16 bg-center bg-cover rounded-full shadow-md"
               />
-              <p className="text-xl font-semibold leading-tight">
-                {review.name}
-              </p>
-              <p className="text-sm uppercase">{review.role}</p>
+              <p className="text-xl font-medium leading-tight">{review.name}</p>
+              <p className="text-sm text-secondary mt-2">{review.role}</p>
             </div>
           </div>
         ))}
