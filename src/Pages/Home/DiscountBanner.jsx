@@ -21,15 +21,15 @@ const DiscountBanner = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
         <div className="w-64">{View}</div>
         <div className="flex flex-col items-center lg:items-start space-y-2 text-center lg:text-left">
-          <span className="text-xl font-semibold">Enjoy a discount!</span>
-          <span className="text-lg">
+          <span className="text-xl font-medium">Enjoy a discount!</span>
+          <span className="text-lg text-secondary">
             Plus free shipping on all orders. Use code:{" "}
             <span className="text-primary-dark">resalelaptop</span>
           </span>
         </div>
         <Link
           to="/products"
-          className="px-5 py-3 rounded-md bg-neutral text-white font-semibold hover:bg-primary-dark transition duration-300"
+          className="px-5 py-3 rounded-md bg-neutral text-white font-medium hover:bg-primary-dark transition duration-300"
         >
           Shop Now
         </Link>

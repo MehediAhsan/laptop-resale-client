@@ -111,10 +111,10 @@ const LaptopTimeline = () => {
               </h3>
               <p className="">{currentLaptop.description}</p>
               <p className="mt-4">
-                <strong>Key Features:</strong> {currentLaptop.features}
+                <strong className="text-secondary">Key Features:</strong> {currentLaptop.features}
               </p>
               <p className="mt-2">
-                <strong>Release Year:</strong> {currentLaptop.releaseYear}
+                <strong className="text-secondary">Release Year:</strong> {currentLaptop.releaseYear}
               </p>
             </div>
           </div>
