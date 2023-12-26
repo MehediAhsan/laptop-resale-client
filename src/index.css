@@ -42,3 +42,13 @@ code {
   background: linear-gradient(45deg, rgb(255, 255, 255), #0bb783);
   border-radius: 8px;
 }
+
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
