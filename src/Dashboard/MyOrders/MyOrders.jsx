@@ -39,7 +39,7 @@ const MyOrders = () => {
           </thead>
           <tbody>
             {
-                bookings?.map((booking,i) => <tr key={booking?._id}>
+              bookings?.length && bookings?.map((booking,i) => <tr key={booking?._id}>
                     <th>{i+1}</th>
                     <td><img className="w-20" src={booking?.picture} alt="" /></td>
                     <td>{booking?.product}</td>

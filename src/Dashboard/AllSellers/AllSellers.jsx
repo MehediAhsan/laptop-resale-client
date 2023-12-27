@@ -62,7 +62,7 @@ const AllSellers = () => {
           </thead>
           <tbody>
             {
-                sellers?.map((seller) => <tr key={seller._id}>
+              sellers?.length && sellers?.map((seller) => <tr key={seller._id}>
                     <td>{seller.name}</td>
                     <td>{seller.email}</td>
                     <td>
