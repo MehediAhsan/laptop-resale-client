@@ -33,6 +33,7 @@ const MyOrders = () => {
               <th></th>
               <th>Image</th>
               <th>Product Name</th>
+              <th>Meet Location</th>
               <th>Price</th>
               <th>Payment</th>
             </tr>
@@ -43,6 +44,7 @@ const MyOrders = () => {
                     <th>{i+1}</th>
                     <td><img className="w-20" src={booking?.picture} alt="" /></td>
                     <td>{booking?.product}</td>
+                    <td>{booking?.meeting_location}</td>
                     <td>${booking?.price}</td>
                     <td>
                       {

@@ -3,6 +3,7 @@ import AddProduct from "../../Dashboard/AddProduct/AddProduct";
 import AllBuyers from "../../Dashboard/AllBuyers/AllBuyers";
 import AllSellers from "../../Dashboard/AllSellers/AllSellers";
 import Dashboard from "../../Dashboard/Dashboard";
+import DeliveryMan from "../../Dashboard/DeliveryMan/DeliveryMan";
 import MyOrders from "../../Dashboard/MyOrders/MyOrders";
 import MyProducts from "../../Dashboard/MyProducts/MyProducts";
 import Payment from "../../Dashboard/Payment/Payment";
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/myorders',
                 element: <PrivateRoute><MyOrders></MyOrders></PrivateRoute>
+            },
+            {
+                path: '/dashboard/deliveryman',
+                element: <PrivateRoute><DeliveryMan></DeliveryMan></PrivateRoute>
             },
             {
                 path: '/dashboard/addproduct',
