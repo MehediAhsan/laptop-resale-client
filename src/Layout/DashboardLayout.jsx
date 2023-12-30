@@ -13,6 +13,7 @@ import {
   RiAlertLine,
 } from "react-icons/ri";
 import { FaPeopleArrows } from "react-icons/fa";
+import { FaMap, FaUser } from "react-icons/fa6";
 
 const DashboardLayout = () => {
   const { user } = useContext(AuthContext);
@@ -46,6 +47,11 @@ const DashboardLayout = () => {
                     <FaPeopleArrows className="icon" /> Delivery Man
                   </Link>
                 </li>
+                <li>
+                  <Link to="/dashboard/deliverylocation">
+                    <FaMap className="icon" /> Delivery Locaion
+                  </Link>
+                </li>
               </>
             )}
             {isSeller && !isAdmin && (
@@ -58,6 +64,11 @@ const DashboardLayout = () => {
                 <li>
                   <Link to="/dashboard/myproducts">
                     <RiShoppingBagLine className="icon" /> My Products
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/dashboard/sellerprofile">
+                    <FaUser className="icon" /> Profile
                   </Link>
                 </li>
               </>

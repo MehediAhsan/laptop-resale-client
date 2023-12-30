@@ -3,10 +3,12 @@ import AddProduct from "../../Dashboard/AddProduct/AddProduct";
 import AllBuyers from "../../Dashboard/AllBuyers/AllBuyers";
 import AllSellers from "../../Dashboard/AllSellers/AllSellers";
 import Dashboard from "../../Dashboard/Dashboard";
+import DeliveryLocaion from "../../Dashboard/DeliveryLocation/DeliveryLocaion";
 import DeliveryMan from "../../Dashboard/DeliveryMan/DeliveryMan";
 import MyOrders from "../../Dashboard/MyOrders/MyOrders";
 import MyProducts from "../../Dashboard/MyProducts/MyProducts";
 import Payment from "../../Dashboard/Payment/Payment";
+import SellerProfile from "../../Dashboard/Profile/SellerProfile";
 import ReportedItems from "../../Dashboard/ReportedItems/ReportedItems";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
@@ -73,12 +75,20 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><DeliveryMan></DeliveryMan></PrivateRoute>
             },
             {
+                path: '/dashboard/deliverylocation',
+                element: <PrivateRoute><DeliveryLocaion></DeliveryLocaion></PrivateRoute>
+            },
+            {
                 path: '/dashboard/addproduct',
                 element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
             },
             {
                 path: '/dashboard/myproducts',
                 element: <SellerRoute><MyProducts></MyProducts></SellerRoute>
+            },
+            {
+                path: '/dashboard/sellerprofile',
+                element: <SellerRoute><SellerProfile></SellerProfile></SellerRoute>
             },
             {
                 path: '/dashboard/allbuyers',
